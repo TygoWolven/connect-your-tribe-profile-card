@@ -1,0 +1,177 @@
+
+/* Heyy docenten van FDND!
+Leuk dat jullie naar mijn opdracht kijken, alleen één nadeeltje....
+Door een wat lastig ontwerp mocht ik alles absolute positioneren omdat het anders
+een heel lastig gedoe werd. Ik heb hier toestemming voor gekregen! */
+        
+body {
+  background-image: url(/images/Achtergrond.png);
+  background-size: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+/* Mijn naam als Titel krijgt natuurlijk een mooie animatie, hieronder is dat te zien! */
+
+h1  {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: absolute;
+  font-size: 100px;
+  top: 100px;
+  left: 500px;    
+  color: rgb(0, 79, 0);
+  overflow: hidden;
+  white-space: nowrap;
+  visibility: hidden;
+  animation: 
+  tekstverschijnen 4s forwards,
+  blink-caret .75s;
+  animation-delay: 1s;
+}
+
+/* Deze keyframes vertellen wat de animatie gaat doen, in dit geval width en visibily veranderen. */
+
+@keyframes tekstverschijnen {
+  0%,100% { visibility: visible }
+  from { width: 0 }
+  to { width: 100% }
+}
+
+h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: absolute;
+  font-size: 30px;
+  top: 125px;
+  left: 500px;
+  color: rgb(0, 79, 0);
+}
+
+/* De volgende code is bedoeld voor de punt achter mijn naam, deze blijft infinite afspelen. */
+
+#Punt {
+  scale: 0.05;
+  position: absolute;
+  top: -282px;
+  left: 710px;
+  opacity: 0;
+  animation: fade 2s infinite;
+  animation-delay: 2.2s;
+}
+
+@keyframes fade {
+  0%,100% { opacity: 0 }
+  50%,60% { opacity: 1 }
+}
+
+/* Dit ben ik, even zorgen dat ik er goed op sta! */
+
+body > img {
+  position: absolute;  
+  top: -100px;
+  left: -150px;
+  scale: 0.7;
+  transition: .3s;
+}
+
+body > img:nth-of-type(1) {
+  filter: blur(20px);
+}
+
+body > img.spin {
+  transform: rotate(5deg);
+  top: 40px;
+}
+
+/* Deze Unordered List gebruik ik voor info die aan de lijn komt, met wat globale styling. */
+
+ul {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  list-style: none;
+  color: white;
+}
+
+/* Hier onder zie je de Unordered List items die zo hun plek op het scherm krijgen. */
+
+#Leeftijd {
+  position: absolute;
+  font-size: 33px;
+  top: 590px;
+  left: 700px;
+}
+
+#Werk {
+  position: absolute;
+  font-size: 33px;
+  top: 560px;
+  left: 975px;
+}
+
+#Woonplaats {
+  position: absolute;
+  font-size: 33px;
+  top: 650px;
+  left: 1230px;
+}
+
+/* Vanaf hier is de CSS voor de Social Media Icons, hier geef ik de grootte en positie aan. */
+
+#Instagram {
+  transition: 500ms;
+  position:absolute;
+  scale: 0.075;
+  top: -300px;
+  left: 999px;
+}
+
+#Github {
+  transition: 500ms;
+  position:absolute;
+  scale: 0.045;
+  top: -738px;
+  left: 475px;
+}
+
+#Snapchat {
+  transition: 500ms;
+  position:absolute;
+  scale: 0.05;
+  top: -517px;
+  left: 423px;
+}
+
+/* Hierbij kun je ook over de Icons hoveren, waardoor ze groter zullen worden. */
+
+#Instagram:hover {
+  scale: 0.1;
+  transition: 500ms;
+}
+
+#Github:hover {
+  scale: 0.06;
+  transition: 500ms;
+}
+
+#Snapchat:hover {
+  scale: 0.07;
+  transition: 500ms;
+}
+
+/* De Arrowbutton dient voor de knop rechts in beeld, waardoor ik ga dansen. :) */
+
+#Arrowbutton {
+  border-style: solid;
+  border-radius: 1000px;
+  border-color: rgb(0, 79, 0);
+  background-color: rgb(0, 79, 0);
+  padding: 0.5em;
+  position: absolute;
+  top: 350px;
+  left: calc(100vw - 6em);
+}
+
+#Arrowbutton img {
+  width: 3em;
+  aspect-ratio: 1/1;
+}
